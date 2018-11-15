@@ -25,4 +25,9 @@ function consultarImagenes($modelo, $conexion) {
     return $resultadosImagenes;
 }
 
+function consultarInformacion($producto, $conexion) {
+    $informacion = $conexion->query("SELECT * FROM productos WHERE idProductos = $producto");
+    return $informacion;
+}
+
 ?>

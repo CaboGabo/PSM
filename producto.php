@@ -1,3 +1,8 @@
+<?php require("conexion.php"); 
+    $conexion = conectar();
+    $informacion = consultarInformacion($_GET['id'], $conexion);
+    //Agregar a la base el meta content y encabezado para obtenerlo.
+     ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,13 +14,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="newStyle.css">
+    
 </head>
 <body>
-    <?php require("conexion.php"); 
-        $conexion = conectar();?>
     <?php include("bannernavbar.html"); ?>
     <main>
         <div class="container backgroundWorkArea">
+        <h2 class="text-center">Encabezado del producto</h2>
         <?php
             $resultados = consultarProducto($_GET['id'], $conexion);
             $i = 0;
@@ -31,22 +36,16 @@
                     $modelo = $fila['Modelo'];
                     $desc = $fila['Descripcion'];
                     $precio = $fila['Precio'];
-    
-                    //$imagenes = consultarImagenes($idModelo, $conexion);
-                    /*foreach($imagenes as $imagen) {
-                        $ruta = $imagen['Ruta'];
-                        echo '<img src="'.$ruta.'">';
-                    }*/
+                    $imagenes = array();
+
+                    $imgs = consultarImagenes($idModelo, $conexion);
+                    foreach($imgs as $img) {
+                        array_push($imagenes,$img);
+                    } 
                 }
-            }
-            else {
-                // Codigo para después
-            }
         ?>
-        <h2 class="text-center">Encabezado del producto</h2>
             <div class="row">
                 <div class="col-sm-8">
-                    <p class="text-center">Aqui van las imagenes</p>
                     <p class="color text-center negrita"><?php echo $nombre; ?></p>
                 <?php
                     if($modelo!=null) {
@@ -80,9 +79,14 @@
                     </div>
                 </div>
             </div> 
+        <?php
+            }
+            else {
+                // Codigo para después
+            }
+        ?>
         </div>
     </main>
-
     <?php include("footer.html"); ?>
 </body>
 </html>
