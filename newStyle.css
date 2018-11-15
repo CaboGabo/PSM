@@ -73,3 +73,7 @@ iframe {
 .tam-des-gran {
     min-height: 200px;
 }
+
+.oculto {
+    display: none;
+}

@@ -36,7 +36,6 @@
                     $modelo = $fila['Modelo'];
                     $desc = $fila['Descripcion'];
                     $precio = $fila['Precio'];
-                    $imagenes = array();
                 }
                 $imgs = consultarImagenes($idModelo, $conexion);
                 $contador = 0;
@@ -89,7 +88,7 @@
                             <div class="panel-body">
                                 <p class="text-center">
                                     <?php for ($j=1; $j<=$contador; $j++) { ?>
-                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $j ?>)"><?php echo $j ?></button> <?php } ?>
+                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $j ?>,0)"><?php echo $j ?></button> <?php } ?>
                                 </p>
                             </div>
                         </div>
@@ -99,7 +98,129 @@
         <?php
             }
             else {
-                // Codigo para después
+                $idModelos = array();
+                $nombres = array();
+                $modelos = array();
+                $descs = array();
+                $precios = array();
+                $imagenes = array();
+                $fkModelos = array();
+                $resultados = consultarProducto($_GET['id'], $conexion);
+                $j=0;
+                foreach($resultados as $fila) {
+                    array_push($idModelos,$fila['idModelos']);
+                    array_push($nombres,$fila['Nombre']);
+                    array_push($modelos,$fila['Modelo']);
+                    array_push($descs,$fila['Descripcion']);
+                    array_push($precios,$fila['Precio']);
+                    $j++;
+                }
+                $l = 0;
+                for($k=0; $k<$j; $k++) {
+                    $imgs = consultarImagenes($idModelos[$k], $conexion);
+                    foreach($imgs as $img) {
+                        array_push($imagenes,$img['Ruta']);
+                        array_push($fkModelos, $img['fkModelos']);
+                        $l++;
+                    }
+                }
+
+                if($k==$l) {?>
+                    <?php
+            ?>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <?php
+                            for($m=0; $m<$k; $m++) {
+                            ?><img class="img-responsive img-center tam-max-prin tam-min-prin mySlides" src="<?php echo $imagenes[$m];?>" alt="<?php echo $nombres[$m] ?>"> <?php } ?> </div>
+                        <div class="panel-footer">
+                            <?php for($m=0; $m<$k; $m++) {
+                                if($m==0) {
+                                ?>
+                            <p id="nombre<?php echo $m ?>" class="color text-center negrita"><?php echo $nombres[$m] ?></p> 
+                            <?php if($modelos[$m] != null) {
+                                ?>
+                                <p id="modelo<?php echo $m ?>" class="color text-center">(MOD. <?php echo $modelos[$m] ?>)</p> <?php
+                            } else {
+                                ?>
+                                <p id="modelo<?php echo $m ?>" class="color text-center"></p>
+                                <?php
+                            }
+                                ?>
+                            <p id="descripcion<?php echo $m ?>" class="color text-justify"><?php echo $descs[$m] ?></p>
+                            <?php
+                                } else {
+                                    ?>
+                            <p id="nombre<?php echo $m ?>" class="color text-center negrita oculto"><?php echo $nombres[$m] ?></p>
+                            <?php  if($modelos[$m] != null) {
+                            ?>  
+                            <p id="modelo<?php echo $m ?>" class="color text-center oculto">(MOD. <?php echo $modelos[$m] ?>)</p> <?php 
+                            } else {
+                                ?>
+                                <p id="modelo<?php echo $m ?>" class="color text-center oculto"></p>
+                                <?php
+                            }
+                            ?>
+                            <p id="descripcion<?php echo $m ?>" class="color text-justify oculto"><?php echo $descs[$m] ?></p>
+                              <?php  }
+                        } ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p class="color text-center negrita">Información del producto:</p>
+                            </div>
+                            <div class="panel-body">
+                                <?php
+                                for($m=0; $m<$k; $m++) {
+                                    if($precios[$m] != null ) {
+                                    if($m==0) {
+                                            ?>
+                                    <p id="precio<?php echo $m ?>" class="color text-center">$<?php echo $precios[$m] ?></p>
+                                    <p id="iva<?php echo $m ?>" class="color text-center">I.V.A. $<?php echo number_format($precios[$m]*0.16,2); ?></p>
+                                    <p id="total<?php echo $m ?>" class="color text-center negrita">PRECIO $<?php echo number_format($precios[$m]*1.16,2); ?></p>   
+                                    <?php
+                                    } else {
+                                        ?>
+                                <p id="precio<?php echo $m ?>" class="color text-center oculto">$<?php echo $precios[$m] ?></p>
+                                <p id="iva<?php echo $m ?>" class="color text-center oculto">I.V.A. $<?php echo number_format($precios[$m]*0.16,2); ?></p>
+                                <p id="total<?php echo $m ?>" class="color text-center negrita oculto">PRECIO $<?php echo number_format($precios[$m]*1.16,2); ?></p>   
+                                <?php  } } else { ?>
+                                    <p id="precio<?php echo $m ?>" class="color text-center">Por favor, solicite su precio vía telefónica o por correo electrónico.</p>
+                                    <p id="iva<?php echo $m ?>" class="color text-center"></p>
+                                    <p id="total<?php echo $m ?>" class="color text-center negrita"></p>   
+                                    <?php 
+                                }
+                                }
+                                ?>
+                            </div>
+                            <div class="panel-footer">
+                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politicaventa.php">AQUÍ</a></strong></p>
+                                <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p class="color text-center negrita">Imágenes:</p>
+                            </div>
+                            <div class="panel-body">
+                                <p class="text-center">
+                                    <?php 
+                                    for ($m=1; $m<=$k; $m++) { ?>
+                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $m ?>, <?php echo $k ?>)"><?php echo $m ?></button> <?php } ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <?php
+                }
             }
         ?>
         </div>
