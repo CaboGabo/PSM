@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    background-color: rgb(30, 42, 99);
+}
+
+.backgroundWorkArea {
+        background-color:white;
+}
+
+.color {
+    color:rgb(30, 42, 99);
+}
+
+h2 {
+    color: rgb(153, 51, 0);
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.informacion-index {
+    background-color: rgb(204, 204, 255);
+}
+
+iframe {
+    border: none;
+}
+
+.datos {
+    font-weight: bold;
+}
+
+.copyright {
+    font-size: 11px;
+}
+
+.footer {
+    background-color: rgb(30, 42, 99);
+    color:white;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+.tam-max {
+    max-height: 100px;
+}
+.tam-min{
+    min-height: 130px;
+}
+
+.tam-des{
+    min-height: 140px;
+}
+
+.tam-des-gran{
+    min-height: 200px;
+}
