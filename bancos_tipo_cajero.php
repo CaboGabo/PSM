@@ -21,10 +21,11 @@
                 <?php
                     $resultados = consultarCategoria(8, $conexion); 
                     foreach($resultados as $fila) { 
+                        $id = $fila['idProductos'];
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
                 ?>
-                <a href="#">
+                <a href="producto.php?id=<?php echo $id ?>">
                 <div class="col-sm-2">
                     <div class="panel panel-primary">
                         <div class="panel-body tam-min"><img class="img-responsive img-center tam-max"src="<?php echo $foto ?>" alt="<?php echo $nom ?>"/ ></div>

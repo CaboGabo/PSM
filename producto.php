@@ -37,21 +37,26 @@
                     $desc = $fila['Descripcion'];
                     $precio = $fila['Precio'];
                     $imagenes = array();
-
-                    $imgs = consultarImagenes($idModelo, $conexion);
-                    foreach($imgs as $img) {
-                        array_push($imagenes,$img);
-                    } 
                 }
+                $imgs = consultarImagenes($idModelo, $conexion);
+                $contador = 0;
         ?>
             <div class="row">
                 <div class="col-sm-8">
-                    <p class="color text-center negrita"><?php echo $nombre; ?></p>
-                <?php
-                    if($modelo!=null) {
-                ?>   
-                <p class="color text-center">(MOD. <?php echo $modelo; ?>)</p><?php }?>
-                <p class="color text-justify"><?php echo $desc; ?></p>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <?php
+                            foreach($imgs as $img) {
+                                $ruta = $img['Ruta'];
+                                $contador++;
+                            ?><img class="img-responsive img-center tam-max-prin tam-min-prin mySlides" src="<?php echo $ruta;?>" alt="<?php echo $nombre ?>"> <?php } ?> </div>
+                        <div class="panel-footer"><p class="color text-center negrita"><?php echo $nombre; ?></p>
+                    <?php
+                        if($modelo!=null) {
+                    ?>   
+                    <p class="color text-center">(MOD. <?php echo $modelo; ?>)</p><?php }?>
+                    <p class="color text-justify"><?php echo $desc; ?></p></div>
+                    </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="panel-group">
@@ -73,7 +78,19 @@
                                 ?>
                             </div>
                             <div class="panel-footer">
-                            <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politicaventa.php">AQUÍ</a></strong></p>
+                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politicaventa.php">AQUÍ</a></strong></p>
+                                <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p class="color text-center negrita">Imágenes:</p>
+                            </div>
+                            <div class="panel-body">
+                                <p class="text-center">
+                                    <?php for ($j=1; $j<=$contador; $j++) { ?>
+                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $j ?>)"><?php echo $j ?></button> <?php } ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -86,6 +103,7 @@
             }
         ?>
         </div>
+        <script src="./js/js.js"></script>
     </main>
     <?php include("footer.html"); ?>
 </body>

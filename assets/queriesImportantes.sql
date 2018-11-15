@@ -19,8 +19,9 @@ create table imagen(idImagen int primary key not null auto_increment,
 					Ruta varchar(500),
                     fkModelos int,
                     foreign key(fkModelos) references modelos(idModelos));
+                    
+select * from productos where idProductos = 92;
+select * from modelos where fkProductos = 92;
 
-select * from productos where fkCategorias = 11;
-select * from modelos where fkProductos > 136 and fkProductos < 143 and fkProductos != 141;
-
-
+select * from imagen where fkModelos = 154;
+update imagen set Ruta = "./img/oficina/oficina principal/modulo directivo.jpg" where idImagen = 192;

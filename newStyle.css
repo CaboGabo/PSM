@@ -54,6 +54,14 @@ iframe {
     max-height: 100px;
 }
 
+.tam-max-prin {
+    max-height: 500px;
+}
+
+.tam-min-prin {
+    min-height: 400px;
+}
+
 .tam-min {
     min-height: 130px;
 }
