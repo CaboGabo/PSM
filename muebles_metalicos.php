@@ -11,14 +11,15 @@
     <link rel="stylesheet" type="text/css" href="newStyle.css">
 </head>
 <body>
-    <?php include("conexion.php"); ?>
+    <?php include("conexion.php"); 
+        $conexion = conectar();?>
     <?php include("bannernavbar.html"); ?>
     <main>
     <div class="container backgroundWorkArea">
             <h2 class="text-center">Archiveros - Casilleros (lockers) - Anaqueles - Gabinetes metálicos </h2>
             <div class="row color text-center">
                 <?php
-                    $resultados = consultarCategoria(11); 
+                    $resultados = consultarCategoria(11, $conexion); 
                     foreach($resultados as $fila) { 
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];

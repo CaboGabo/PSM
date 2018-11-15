@@ -11,14 +11,15 @@
     <link rel="stylesheet" type="text/css" href="newStyle.css">
 </head>
 <body>
-    <?php include("conexion.php"); ?>
+    <?php include("conexion.php"); 
+        $conexion = conectar();?>
     <?php include("bannernavbar.html"); ?>
     <main>
     <div class="container backgroundWorkArea">
             <h2 class="text-center">Sillas para oficina, secretariales, reclinables, giratorias y de altura ajustable</h2>
             <div class="row color text-center">
                 <?php
-                    $resultados = consultarCategoria(6); 
+                    $resultados = consultarCategoria(6, $conexion); 
                     foreach($resultados as $fila) { 
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];

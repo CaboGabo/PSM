@@ -6,11 +6,15 @@ body {
 }
 
 .backgroundWorkArea {
-        background-color:white;
+    background-color: white;
+}
+
+.negrita {
+    font-weight: bold;
 }
 
 .color {
-    color:rgb(30, 42, 99);
+    color: rgb(30, 42, 99);
 }
 
 h2 {
@@ -39,7 +43,7 @@ iframe {
 
 .footer {
     background-color: rgb(30, 42, 99);
-    color:white;
+    color: white;
 }
 
 .img-center {
@@ -49,14 +53,15 @@ iframe {
 .tam-max {
     max-height: 100px;
 }
-.tam-min{
+
+.tam-min {
     min-height: 130px;
 }
 
-.tam-des{
+.tam-des {
     min-height: 140px;
 }
 
-.tam-des-gran{
+.tam-des-gran {
     min-height: 200px;
 }

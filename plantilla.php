@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="newStyle.css">
 </head>
 <body>
+    <?php include("conexion.php"); 
+        $conexion = conectar();?>
     <?php include("bannernavbar.html"); ?>
     <main>
         <div class="container backgroundWorkArea">
