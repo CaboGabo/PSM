@@ -18,14 +18,33 @@
     <main>
     <div class="container backgroundWorkArea">
             <h2 class="text-center">Sillas para oficina, secretariales, reclinables, giratorias y de altura ajustable</h2>
+            <div class="row color text-center color"> <h3>Línea de sillas para oficina económicas (de uso moderado)</h3></div>
             <div class="row color text-center">
+                 <?php
+                    $resultados = consultarCategoria(6, $conexion);
+                    $i=0; 
+                    foreach($resultados as $fila) { 
+                        $previa = $fila['Previa'];
+                        if(strpos($previa, 'continuo)') != false) {
+                            break;
+                        }
+                        $i++;
+                    }
+                ?>
                 <?php
+                    $j=0;
                     $resultados = consultarCategoria(6, $conexion); 
                     foreach($resultados as $fila) { 
                         $id = $fila['idProductos'];
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
+                        $previa = $fila['Previa'];
+                        if($j==$i) {
                 ?>
+                    </div>
+                    <div class="row text-center color"><h3>Línea de sillas para oficina(de uso continuo)</h3></div>
+                    <div class="row">
+                        <?php } $j++; ?>
                 <a href="producto.php?id=<?php echo $id ?>">
                 <div class="col-sm-2">
                     <div class="panel panel-primary">
