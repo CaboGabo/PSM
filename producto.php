@@ -1,15 +1,20 @@
 <?php require("conexion.php"); 
     $conexion = conectar();
     $informacion = consultarInformacion($_GET['id'], $conexion);
-    //Agregar a la base el meta content y encabezado para obtenerlo.
+    foreach($informacion as $info) {
+        $meta = $info['Meta'];
+        $titulo = $info['Titulo'];
+        $encabezado = $info['Encabezado'];
+    }
      ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="<?php echo $meta; ?>" name="description">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Promotora de Sillas y Muebles</title>
+    <title><?php echo $titulo; ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -20,7 +25,7 @@
     <?php include("bannernavbar.html"); ?>
     <main>
         <div class="container backgroundWorkArea">
-        <h2 class="text-center">Encabezado del producto</h2>
+        <h2 class="text-center"><?php echo $encabezado; ?></h2>
         <?php
             $resultados = consultarProducto($_GET['id'], $conexion);
             $i = 0;

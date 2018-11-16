@@ -20,8 +20,3 @@ create table imagen(idImagen int primary key not null auto_increment,
                     fkModelos int,
                     foreign key(fkModelos) references modelos(idModelos));
                     
-select * from productos where idProductos = 92;
-select * from modelos where fkProductos = 92;
-
-select * from imagen where fkModelos = 154;
-update imagen set Ruta = "./img/oficina/oficina principal/modulo directivo.jpg" where idImagen = 192;

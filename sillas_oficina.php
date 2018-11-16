@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="Promotora de Sillas y Muebles fabrica sillas de oficina. Sillones y sillas ejecutivas, secretariales, operativas y de visita" name="description">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Promotora de Sillas y Muebles</title>
+    <title>Sillas para Oficina | Sillas de Oficina | Sillas y Sillones | Promotora de sillas y muebles</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -35,6 +36,7 @@
                 </a>
                 <?php } ?> 
             </div>
+            <p class="text-center color">Si desea ver los colores de tela disponibles para el tapíz de las sillas, haga clic <a href="colores_de_pliana.php">AQUÍ</a></strong></p>
     </div> 
     </main>
     <?php include("footer.html"); ?>

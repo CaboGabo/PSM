@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="bancos tipo cajero de altura ajustable, con arillo posapie. Ideal para mostrador, recepcion y cajeros" name="description">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Promotora de Sillas y Muebles</title>
+    <title>Bancos tipo cajero</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
