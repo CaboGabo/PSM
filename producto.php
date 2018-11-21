@@ -209,19 +209,19 @@
                                     if($precios[$m] != null ) {
                                     if($m==0) {
                                             ?>
-                                    <p id="precio<?php echo $m ?>" class="color text-center">$<?php echo $precios[$m] ?></p>
+                                    <p id="precio<?php echo $m ?>" class="color text-center">$<?php echo number_format($precios[$m],2); ?></p>
                                     <p id="iva<?php echo $m ?>" class="color text-center">I.V.A. $<?php echo number_format($precios[$m]*0.16,2); ?></p>
                                     <p id="total<?php echo $m ?>" class="color text-center negrita">PRECIO $<?php echo number_format($precios[$m]*1.16,2); ?></p>   
                                     <?php
                                     } else {
                                         ?>
-                                <p id="precio<?php echo $m ?>" class="color text-center oculto">$<?php echo $precios[$m] ?></p>
+                                <p id="precio<?php echo $m ?>" class="color text-center oculto">$<?php echo number_format($precios[$m],2); ?></p>
                                 <p id="iva<?php echo $m ?>" class="color text-center oculto">I.V.A. $<?php echo number_format($precios[$m]*0.16,2); ?></p>
                                 <p id="total<?php echo $m ?>" class="color text-center negrita oculto">PRECIO $<?php echo number_format($precios[$m]*1.16,2); ?></p>   
                                 <?php  } } else { ?>
-                                    <p id="precio<?php echo $m ?>" class="color text-center">Por favor, solicite su precio vía telefónica o por correo electrónico.</p>
-                                    <p id="iva<?php echo $m ?>" class="color text-center"></p>
-                                    <p id="total<?php echo $m ?>" class="color text-center negrita"></p>   
+                                    <p id="precio<?php echo $m ?>" class="color text-center oculto">Por favor, solicite su precio vía telefónica o por correo electrónico.</p>
+                                    <p id="iva<?php echo $m ?>" class="color text-center oculto"></p>
+                                    <p id="total<?php echo $m ?>" class="color text-center negrita oculto"></p>   
                                     <?php 
                                 }
                                 }
