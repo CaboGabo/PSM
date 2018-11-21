@@ -79,7 +79,30 @@
                                     <p class="color text-center">Por favor, solicite su precio vía telefónica o por correo electrónico.</p>    
                                 <?php
                                     }
+
+                                    if(strpos($nombre,"CONCHA")!=false) {
+                                        $nombresColores = array('Amarillo', 'Azul', 'Naranja', 'Negro', 'Rojo', 'Verde');
+                                        $rutasColores = array('./img/colores_concha/amarillo.jpg',
+                                                            './img/colores_concha/azul.jpg',
+                                                            './img/colores_concha/naranja.jpg',
+                                                            './img/colores_concha/negro.jpg',
+                                                            './img/colores_concha/rojo.jpg',
+                                                            './img/colores_concha/verde.jpg');
+                                        ?>
+                                        <p class="color text-center">Colores disponibles:</p>
+                                        <div class="row color text-center">
+                                        <?php
+                                            for($i=0; $i<6; $i++) { //Cambiar por el 6 por número de colores
+                                        ?>
+                                            <div class="col-sm-4"><img class="img-responsive img-center" src="<?php echo $rutasColores[$i]; ?>" alt="<?php echo $nombresColores[$i] ?>" ></div>
+                                        <?php   
+                                        } 
+                                        ?>
+                                        </div>
+                                        <?php
+                                    }
                                 ?>
+                                
                             </div>
                             <div class="panel-footer">
                                 <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politicaventa.php">AQUÍ</a></strong></p>

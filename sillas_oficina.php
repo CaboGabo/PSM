@@ -49,7 +49,7 @@
                 <div class="col-sm-2">
                     <div class="panel panel-primary">
                         <div class="panel-body tam-min"><img class="img-responsive img-center tam-max" src="<?php echo $foto ?>" alt="<?php echo $nom ?>"/ ></div>
-                        <div class="panel-footer tam-des"><?php echo $nom ?></div>
+                        <div class="panel-footer tam-des text-center"><?php echo $nom ?></div>
                     </div>
                 </div>
                 </a>
