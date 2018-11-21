@@ -26,6 +26,8 @@
                         $id = $fila['idProductos']; 
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
+
+                        if($nom!="DESC") {
                 ?>
                 <a href="producto.php?id=<?php echo $id ?>">
                 <div class="col-sm-2">
@@ -35,7 +37,7 @@
                     </div>
                 </div>
                 </a>
-                <?php } ?> 
+                        <?php } } ?> 
             </div>
             <div class="row color text-center">
                 <div class="col-sm-12">

@@ -25,6 +25,8 @@
                         $id = $fila['idProductos'];
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
+
+                        if($nom!="DESC") {
                 ?>
                 <a href="producto.php?id=<?php echo $id ?>">
                 <div class="col-sm-2">
@@ -34,7 +36,7 @@
                     </div>
                 </div>
                 </a>
-                <?php } ?> 
+                <?php } } ?> 
             </div>
             <p class="text-center color">Si desea ver los colores disponibles para los muebles, haga clic <a href="colores_muebles.php">AQUÍ</a></strong></p>  
             <div class="row color text-center">

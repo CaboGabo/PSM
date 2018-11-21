@@ -20,3 +20,4 @@ create table imagen(idImagen int primary key not null auto_increment,
                     fkModelos int,
                     foreign key(fkModelos) references modelos(idModelos));
                     
+				

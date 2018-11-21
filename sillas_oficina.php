@@ -39,6 +39,8 @@
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
                         $previa = $fila['Previa'];
+
+                        if($nom!="DESC") {
                         if($j==$i) {
                 ?>
                     </div>
@@ -53,7 +55,7 @@
                     </div>
                 </div>
                 </a>
-                <?php } ?> 
+                <?php }  }?> 
             </div>
             <p class="text-center color">Si desea ver los colores de tela disponibles para el tapíz de las sillas, haga clic <a href="colores_de_pliana.php">AQUÍ</a></strong></p>
     </div> 

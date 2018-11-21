@@ -25,6 +25,8 @@
                         $id = $fila['idProductos']; 
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
+
+                        if($nom!="DESC") {
                 ?>
                 <a href="producto.php?id=<?php echo $id ?>">
                 <div class="col-sm-2">
@@ -34,7 +36,7 @@
                     </div>
                 </div>
                 </a>
-                <?php } ?> 
+                <?php } } ?> 
             </div>
             <div class="row color text-center">
                 <div class="col-sm-12"><p>Las estructuras de las sillas y mesas pueden tener un acabado cromado o esmaltadas en color negro o color aluminio. Las cubiertas de las mesas son en color de su elección. También se fabrican con forma circular o cuadrada (con una medida habitual de 60 cms o la medida que usted requiera, con excepción de los bancos y mesas de aluminio, que al ser importados cuentan con una medida ya establecida.)</p></div>

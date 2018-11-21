@@ -25,6 +25,8 @@
                         $id = $fila['idProductos'];
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
+
+                        if($nom!="DESC") {
                 ?>
                 <a href="producto.php?id=<?php echo $id ?>">
                 <div class="col-sm-2">
@@ -34,7 +36,7 @@
                     </div>
                 </div>
                 </a>
-                <?php } ?>
+                <?php } } ?>
             </div>
             <p class="text-center color">Para ver algunos de los colores disponibles para las cubiertas de mesas escolares, haga clic <a href="colores_cubiertas_escolares.php">AQUÍ</a></strong></p>  
     </div> 
