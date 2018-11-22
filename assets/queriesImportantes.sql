@@ -19,9 +19,4 @@ create table imagen(idImagen int primary key not null auto_increment,
 					Ruta varchar(500),
                     fkModelos int,
                     foreign key(fkModelos) references modelos(idModelos));
-                    
-                    
-update imagen set Ruta="./img/apilablesvisita/apilablesvisita principal/ap 2p vinil cromo 1.jpg", fkModelos=194 where idImagen=43;
-
-
-				
+		

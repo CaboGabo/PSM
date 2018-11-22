@@ -53,7 +53,7 @@
                             foreach($imgs as $img) {
                                 $ruta = $img['Ruta'];
                                 $contador++;
-                            ?><img class="img-responsive img-center tam-max-prin tam-min-prin mySlides" src="<?php echo $ruta;?>" alt="<?php echo $nombre ?>"> <?php } ?> </div>
+                            ?><img class="img-responsive img-center tam-max-prin mySlides" src="<?php echo $ruta;?>" alt="<?php echo $nombre ?>"> <?php } ?> </div>
                         <div class="panel-footer"><p class="color text-center negrita"><?php echo $nombre; ?></p>
                     <?php
                         if($modelo!=null) {
@@ -105,7 +105,7 @@
                                 
                             </div>
                             <div class="panel-footer">
-                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politicaventa.php">AQUÍ</a></strong></p>
+                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta.php">AQUÍ</a></strong></p>
                                 <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                         <div class="panel-body">
                             <?php
                             for($m=0; $m<$k; $m++) {
-                            ?><img class="img-responsive img-center tam-max-prin tam-min-prin mySlides" src="<?php echo $imagenes[$m];?>" alt="<?php echo $nombres[$m] ?>"> <?php } ?> </div>
+                            ?><img class="img-responsive img-center tam-max-prin mySlides" src="<?php echo $imagenes[$m];?>" alt="<?php echo $nombres[$m] ?>"> <?php } ?> </div>
                         <div class="panel-footer">
                             <?php for($m=0; $m<$k; $m++) {
                                 if($m==0) {
@@ -218,17 +218,26 @@
                                 <p id="precio<?php echo $m ?>" class="color text-center oculto">$<?php echo number_format($precios[$m],2); ?></p>
                                 <p id="iva<?php echo $m ?>" class="color text-center oculto">I.V.A. $<?php echo number_format($precios[$m]*0.16,2); ?></p>
                                 <p id="total<?php echo $m ?>" class="color text-center negrita oculto">PRECIO $<?php echo number_format($precios[$m]*1.16,2); ?></p>   
-                                <?php  } } else { ?>
+                                <?php  } } else { 
+                                        if($m==0) {
+                                            ?>
+                                    <p id="precio<?php echo $m ?>" class="color text-center">Por favor, solicite su precio vía telefónica o por correo electrónico.</p>
+                                    <p id="iva<?php echo $m ?>" class="color text-center"></p>
+                                    <p id="total<?php echo $m ?>" class="color text-center negrita"></p>   
+                                    <?php 
+                                        } else {
+
+                                            ?>
                                     <p id="precio<?php echo $m ?>" class="color text-center oculto">Por favor, solicite su precio vía telefónica o por correo electrónico.</p>
                                     <p id="iva<?php echo $m ?>" class="color text-center oculto"></p>
                                     <p id="total<?php echo $m ?>" class="color text-center negrita oculto"></p>   
-                                    <?php 
+                                    <?php    }
                                 }
                                 }
                                 ?>
                             </div>
                             <div class="panel-footer">
-                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politicaventa.php">AQUÍ</a></strong></p>
+                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta.php">AQUÍ</a></strong></p>
                                 <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
                             </div>
                         </div>
