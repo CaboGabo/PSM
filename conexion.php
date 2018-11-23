@@ -1,7 +1,7 @@
 
 <?php
 function conectar() {
-    $conexion = new PDO('mysql:host=localhost;dbname=sillasym_PSMbd', 'sillasym_custome', 'customerpassword');
+    $conexion = new PDO('mysql:host=localhost;dbname=sym', 'root', 'root');
     return $conexion;
 }
 

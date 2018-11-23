@@ -48,12 +48,18 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="panel panel-default">
-                        <div class="panel-body">
+                        <div class="panel-heading">
                             <?php
                             foreach($imgs as $img) {
                                 $ruta = $img['Ruta'];
                                 $contador++;
                             ?><img class="img-responsive img-center tam-max-prin mySlides" src="<?php echo $ruta;?>" alt="<?php echo $nombre ?>"> <?php } ?> </div>
+                        <div class="panel-body">
+                            <p class="text-center">
+                                    <?php for ($j=1; $j<=$contador; $j++) { ?>
+                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $j ?>,0)"><?php echo $j ?></button> <?php } ?>
+                            </p>
+                        </div>
                         <div class="panel-footer"><p class="color text-center negrita"><?php echo $nombre; ?></p>
                     <?php
                         if($modelo!=null) {
@@ -109,17 +115,6 @@
                                 <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <p class="color text-center negrita">Imágenes:</p>
-                            </div>
-                            <div class="panel-body">
-                                <p class="text-center">
-                                    <?php for ($j=1; $j<=$contador; $j++) { ?>
-                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $j ?>,0)"><?php echo $j ?></button> <?php } ?>
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div> 
@@ -159,10 +154,17 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="panel panel-default">
-                        <div class="panel-body">
+                        <div class="panel-heading">
                             <?php
                             for($m=0; $m<$k; $m++) {
                             ?><img class="img-responsive img-center tam-max-prin mySlides" src="<?php echo $imagenes[$m];?>" alt="<?php echo $nombres[$m] ?>"> <?php } ?> </div>
+                        <div class="panel-body">
+                        <p class="text-center">
+                            <?php 
+                            for ($m=1; $m<=$k; $m++) { ?>
+                                <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $m ?>, <?php echo $k ?>)"><?php echo $m ?></button> <?php } ?>
+                                </p>
+                        </div>
                         <div class="panel-footer">
                             <?php for($m=0; $m<$k; $m++) {
                                 if($m==0) {
@@ -240,18 +242,6 @@
                             <div class="panel-footer">
                                 <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta.php">AQUÍ</a></strong></p>
                                 <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <p class="color text-center negrita">Imágenes:</p>
-                            </div>
-                            <div class="panel-body">
-                                <p class="text-center">
-                                    <?php 
-                                    for ($m=1; $m<=$k; $m++) { ?>
-                                    <button type="button" class="btn btn-primary" onclick="currentDiv(<?php echo $m ?>, <?php echo $k ?>)"><?php echo $m ?></button> <?php } ?>
-                                </p>
                             </div>
                         </div>
                     </div>
