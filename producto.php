@@ -102,7 +102,7 @@
                                         <?php
                                     }
                                 ?>
-                                
+                                <p class="color text-center">Los precios publicados pueden cambiar sin previo aviso. Para más información contáctenos.</p>
                             </div>
                             <div class="panel-footer">
                                 <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta.php">AQUÍ</a></strong></p>
@@ -235,6 +235,7 @@
                                 }
                                 }
                                 ?>
+                                <p class="color text-center">Los precios publicados pueden cambiar sin previo aviso. Para más información contáctenos.</p>
                             </div>
                             <div class="panel-footer">
                                 <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta.php">AQUÍ</a></strong></p>
