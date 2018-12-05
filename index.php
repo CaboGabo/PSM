@@ -15,7 +15,7 @@
     <?php include("bannernavbar.html"); ?>
     <main>
     <div class="container backgroundWorkArea">
-        <h2 class="text-center">Ofrecemos para usted sillas y muebles de calidad, excelente precio y el mejor servicio.</h2>
+        <h2 class="text-center">Ofrecemos para usted sillas y muebles con calidad, precio y servicio.</h2>
         <div class="container">
             <div class="text-center">
                 <img class="img-responsive img-center" src="./assets/logo promotora de sillas y muebles.gif" alt="Promotora de Sillas y Muebles" title="Promotora de Sillas y Muebles">
