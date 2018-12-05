@@ -23,7 +23,7 @@
 				</div>
 				<div class="col-sm-6">
 					<p>Ubicación:<br /><strong>Av. Vía Morelos #77 (entre Benito Juárez y Porfirio Díaz)<br />Col. Urbana Ixhuatepec C.P. 55349<br />Ecatepec, Estado de México.</strong></p>
-					<p>Teléfonos:<br /><strong>(55) 5121-7024<br />(55) 5783-3743<br />(55) 2453-2087</strong></p>
+					<p>Teléfonos:<br /><strong>(55) 5121-7024<br />(55) 5783-3743</strong></p>
 					<p>Correo electrónico:<br /><strong>ventas@sillasymuebles.com.mx</strong></p>
 				</div>
 			</div>

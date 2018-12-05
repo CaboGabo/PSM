@@ -31,7 +31,7 @@
                 <p>Para resolver cualquier duda o aclaración, envíenos un correo electrónico a:</p>
                 <p class="subrayado"><strong>ventas@sillasymuebles.com.mx</strong></p>
                 <p> indicándonos su nombre, teléfono, localidad y correo electrónico, o bien, puede llamar a los teléfonos:</p>
-                <p><strong>(55) 5783-3743<br>(55) 5121-7024<br>(55) 2453-2087</strong></p>
+                <p><strong>(55) 5783-3743<br>(55) 5121-7024</p>
             </div>
             <div class="col-sm-4">
                 <p><strong>Puede visitarnos en:</strong></p>
