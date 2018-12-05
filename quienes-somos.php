@@ -19,12 +19,11 @@
 	<div class="row text-center color">
 		<div class="col-sm-6">
 			<p>ESTIMADO CLIENTE:</p>
-			<p class="text-justify">Somos una empresa que tiene como objetivo fundamental, ofrecer a usted sillas y muebles para su oficina, negocio y hogar, fabricados con un alto estándar de calidad, e intentando ofrecer siempre los precios más bajos y competitivos del mercado.</p>
-			<p class="text-justify">Tenemos la obligación de atenderle a usted, y a todos nuestros clientes y prospectos, con el trato amable y atento que merecen.</p>
+			<p class="text-justify">El objetivo de nuestra empresa es ofrecer sillas y muebles para oficina, negocio y hogar, fabricados con alto estándar de calidad y esforzándonos en ofrecer los precios más bajos y competitivos del mercado.</p>
+			<p class="text-justify">Tenemos el compromiso de atender a nuestros clientes y visitantes con el trato amable y atento que merecen.</p>
 			<p class="text-justify">Usted encontrará una amplia variedad de sillas y mesas como son:</p>
 			<p>Sillas plegables y sillas apilables,<br />sillas y mesas escolares,<br />sillas de visita,<br />sillas y mesas para restaurante,<br />tablones plegables para eventos,<br />así como sillas y muebles para oficina.</p>
-			<p class="text-justify">Le invitamos a recorrer nuestra página web, donde estamos seguros encontrará el mobiliario que su hogar, negocio u oficina requieren, le damos las gracias por visitar nuestro sitio web, y quedamos a sus apreciables órdenes.</p>
-			<h2>Le agradecemos su visita a nuestro sitio web.</h2>
+			<p class="text-justify">Lo invitamos a visitar nuestro sitio web. Asimismo, agradecemos su valiosa visita.</p>
 		</div>
 		<div class="col-sm-6">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
