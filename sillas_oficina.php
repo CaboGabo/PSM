@@ -39,15 +39,17 @@
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
                         $previa = $fila['Previa'];
+                        $prod = $fila['Titulo'];
 
                         if($nom!="DESC") {
+                            $prod = friendly_url($prod);
                         if($j==$i) {
                 ?>
                     </div>
                     <div class="row text-center color"><h3>Línea de sillas para oficina(de uso continuo)</h3></div>
                     <div class="row">
                         <?php } $j++; ?>
-                <a href="producto.php?id=<?php echo $id ?>">
+                <a href="producto/<?php echo "$id/$prod"?>">
                 <div class="col-sm-2">
                     <div class="panel panel-primary">
                         <div class="panel-body tam-min"><img class="img-responsive img-center tam-max" src="<?php echo $foto ?>" alt="<?php echo $nom ?>"/ ></div>
@@ -57,7 +59,7 @@
                 </a>
                 <?php }  }?> 
             </div>
-            <p class="text-center color">Si desea ver los colores de tela disponibles para el tapíz de las sillas, haga clic <a href="colores_de_pliana.php">AQUÍ</a></strong></p>
+            <p class="text-center color">Si desea ver los colores de tela disponibles para el tapíz de las sillas, haga clic <a href="colores_de_pliana">AQUÍ</a></strong></p>
     </div> 
     </main>
     <?php include("footer.html"); ?>

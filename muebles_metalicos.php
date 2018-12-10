@@ -26,9 +26,11 @@
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
                         $pre = $fila['Previa'];
+                        $prod = $fila['Titulo'];
                         if($nom!="DESC") {
+                            $prod = friendly_url($prod);
                 ?>
-                <a href="producto.php?id=<?php echo $id ?>">
+                <a href="producto/<?php echo "$id/$prod"?>">
                 <div class="col-sm-2">
                     <div class="panel panel-primary">
                         <div class="panel-body tam-min"><img class="img-responsive img-center tam-max" src="<?php echo $foto ?>" alt="<?php echo $nom ?>" ></div>

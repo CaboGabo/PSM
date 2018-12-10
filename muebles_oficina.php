@@ -25,10 +25,12 @@
                         $id = $fila['idProductos'];
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
+                        $prod = $fila['Titulo'];
 
                         if($nom!="DESC") {
+                            $prod = friendly_url($prod);
                 ?>
-                <a href="producto.php?id=<?php echo $id ?>">
+                <a href="producto/<?php echo "$id/$prod"?>">
                 <div class="col-sm-2">
                     <div class="panel panel-primary">
                         <div class="panel-body tam-min"><img class="img-responsive img-center tam-max" src="<?php echo $foto ?>" alt="<?php echo $nom ?>"/ ></div>
@@ -38,7 +40,7 @@
                 </a>
                 <?php } } ?> 
             </div>
-            <p class="text-center color">Si desea ver los colores disponibles para los muebles, haga clic <a href="colores_muebles.php">AQUÍ</a></strong></p>  
+            <p class="text-center color">Si desea ver los colores disponibles para los muebles, haga clic <a href="colores_muebles">AQUÍ</a></strong></p>  
             <div class="row color text-center">
                 <div class="col-sm-12">
                     <p class="negrita">Nuestros muebles son fabricados con tableros de madera industrializada, recubiertos de laminado plástico de baja presión (Panel Art)</p>

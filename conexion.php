@@ -30,4 +30,17 @@ function consultarInformacion($producto, $conexion) {
     return $informacion;
 }
 
+function friendly_url($cadena) {
+    $cadena = strtolower($cadena);
+    $find = array('á', 'é', 'í', 'ó', 'ú', 'ñ');
+    $repl = array('a', 'e', 'i', 'o', 'u', 'n');
+    $cadena = str_replace($find, $repl, $cadena);
+
+    $find = array(' ', '&', '\r\n', '\n', '+');
+    $cadena = str_replace($find,'-', $cadena);
+
+    return $cadena;
+
+}
+
 ?>

@@ -20,3 +20,8 @@ create table imagen(idImagen int primary key not null auto_increment,
                     fkModelos int,
                     foreign key(fkModelos) references modelos(idModelos));
 		
+use esquemaimportprueba;
+
+select * from categorias;
+
+update imagen set Ruta = "./img/plegables/plegables principal/plegables acojinadas de colores.jpg" where idImagen=1;

@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta content="<?php echo $meta; ?>" name="description">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="http://localhost/PSM/">
     <title><?php echo $titulo; ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -111,7 +112,7 @@
                                 <p class="color text-center">Los precios publicados pueden cambiar sin previo aviso. Para más información contáctenos.</p>
                             </div>
                             <div class="panel-footer">
-                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta.php">AQUÍ</a></strong></p>
+                                <p class="color text-center">Consulte la política de venta haciendo clic <strong><a href="politica_venta">AQUÍ</a></strong></p>
                                 <a href="<?=$_SERVER['HTTP_REFERER'] ?>"><button type="button" class="btn btn-danger btn-block">Volver</button></a>
                             </div>
                         </div>

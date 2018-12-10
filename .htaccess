@@ -1,0 +1,23 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^producto/([0-9]+)/(.+)$ producto.php?id=$1&producto=$2
+RewriteRule ^index$ index.php
+RewriteRule ^quienes-somos$ quienes-somos.php
+RewriteRule ^contacto$ contacto.php
+
+RewriteRule ^sillas_y_mesas_plegables$ sillas_y_mesas_plegables.php
+RewriteRule ^sillas_apilables_y_visita$ sillas_apilables_y_visita.php
+RewriteRule ^sillas_y_mesas_escolares$ sillas_y_mesas_escolares.php
+RewriteRule ^sillas_y_mesas_comedor$ sillas_y_mesas_comedor.php
+RewriteRule ^sillas_y_mesas_altas$ sillas_y_mesas_altas.php
+RewriteRule ^sillas_oficina$ sillas_oficina.php
+RewriteRule ^muebles_oficina$ muebles_oficina.php
+RewriteRule ^bancos_tipo_cajero$ bancos_tipo_cajero.php
+RewriteRule ^sillones_ejecutivos$ sillones_ejecutivos.php
+RewriteRule ^bancas_espera$ bancas_espera.php
+RewriteRule ^muebles_metalicos$ muebles_metalicos.php
+RewriteRule ^colores_cubiertas_escolares$ colores_cubiertas_escolares.php
+RewriteRule ^colores_de_pliana$ colores_de_pliana.php
+RewriteRule ^colores_muebles$ colores_muebles.php
+RewriteRule ^politica_venta$ politica_venta.php

@@ -25,10 +25,11 @@
                         $id = $fila['idProductos'];
                         $foto = $fila['mini'];
                         $nom = $fila['Nombre'];
-
+                        $prod = $fila['Titulo'];
                         if($nom!="DESC") {
+                            $prod = friendly_url($prod);
                 ?>
-                <a href="producto.php?id=<?php echo $id ?>">
+                <a href="producto/<?php echo "$id/$prod"?>">
                 <div class="col-lg-2">
                     <div class="panel panel-primary">
                         <div class="panel-body tam-min"><img class="img-responsive img-center tam-max" src="<?php echo $foto ?>" alt="<?php echo $nom ?>"/ ></div>
@@ -38,7 +39,7 @@
                 </a>
                 <?php } } ?>
             </div>
-            <p class="text-center color">Para ver algunos de los colores disponibles para las cubiertas de mesas escolares, haga clic <a href="colores_cubiertas_escolares.php">AQUÍ</a></strong></p>  
+            <p class="text-center color">Para ver algunos de los colores disponibles para las cubiertas de mesas escolares, haga clic <a href="colores_cubiertas_escolares">AQUÍ</a></strong></p>  
     </div> 
     </main>
     <?php include("footer.html"); ?>
