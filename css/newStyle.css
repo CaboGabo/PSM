@@ -71,10 +71,18 @@ iframe {
     min-height: 140px;
 }
 
+.tam-nombre {
+    min-height: 100px;
+}
+
 .tam-des-gran {
     min-height: 200px;
 }
 
 .oculto {
     display: none;
+}
+
+.descripcion {
+    font-size: 12px;
 }
